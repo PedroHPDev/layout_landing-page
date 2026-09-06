@@ -3,7 +3,7 @@ $color-dark: #1d1d1d;
 $color-white: #fff;
 $color-gray: #7e7e83;
 $color-light-gray: #f8f8fa;
-$color-accent: #ff6b00; // ajuste pra cor de destaque do seu design, se tiver
+$color-accent: #ff6b00;
 $font-main: Arial, sans-serif;
 $container-width: 1200px;
 $container-padding: 20px;
@@ -48,7 +48,7 @@ button {
   background: none;
 }
 
-// ===== Container helper (mixin simples) =====
+// ===== Container helper =====
 @mixin container {
   max-width: $container-width;
   margin: 0 auto;
@@ -60,9 +60,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 20px $container-padding;
-
   background-color: $color-dark;
   color: $color-white;
 
@@ -73,7 +71,7 @@ button {
   }
 
   &__nav {
-    display: none; // aparece no desktop via media query mais pra frente
+    display: none;
 
     @media (min-width: 1024px) {
       display: block;
@@ -134,6 +132,9 @@ button {
 
 // ===== Move Free (hero) =====
 .move-free {
+  background-image: url('../images/move-free/hero.jpg');
+  background-size: cover;
+  background-position: center;
   background-color: $color-dark;
   color: $color-white;
   padding: 60px $container-padding;
@@ -153,6 +154,10 @@ button {
 
   &__info {
     @include container;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px $container-padding;
+    border-radius: 8px;
   }
 
   &__subtitle {
@@ -160,7 +165,7 @@ button {
     margin-bottom: 12px;
   }
 
-    &__text {
+  &__text {
     color: $color-gray;
     max-width: 500px;
   }
@@ -171,7 +176,6 @@ button {
   @include container;
 
   padding-top: 60px;
-
   padding-bottom: 60px;
 
   &__title {
@@ -190,6 +194,10 @@ button {
   }
 
   &__image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
     margin-bottom: 16px;
   }
 
@@ -229,6 +237,13 @@ button {
     @media (min-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
     }
+  }
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
   }
 
   &__name {
