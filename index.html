@@ -18,7 +18,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">MyBIKE</div>
+      <a href="#" class="header__logo">MyBIKE</a>
 
       <nav class="header__nav">
         <ul class="header__list">
@@ -55,11 +55,13 @@
 
         <ul class="compare-bikes__list">
           <li class="compare-bikes__item">
-            <img
-              class="compare-bikes__image"
-              src="src/images/compare-bikes/sporty-4.jpg"
-              alt="Sporty 4"
-            />
+            <a href="#" class="compare-bikes__link">
+              <img
+                class="compare-bikes__image"
+                src="src/images/compare-bikes/sporty-4.jpg"
+                alt="Sporty 4"
+              />
+            </a>
             <h3 class="compare-bikes__name">Sporty 4</h3>
             <p class="compare-bikes__description">
               The iconic frame brought to a new performance height on a
@@ -69,11 +71,13 @@
           </li>
 
           <li class="compare-bikes__item">
-            <img
-              class="compare-bikes__image"
-              src="src/images/compare-bikes/ride-in-town.jpg"
-              alt="Ride in town S7"
-            />
+            <a href="#" class="compare-bikes__link">
+              <img
+                class="compare-bikes__image"
+                src="src/images/compare-bikes/ride-in-town.jpg"
+                alt="Ride in town S7"
+              />
+            </a>
             <h3 class="compare-bikes__name">Ride in town S7</h3>
             <p class="compare-bikes__description">
               An open frame for an upright riding position on the most
@@ -83,11 +87,13 @@
           </li>
 
           <li class="compare-bikes__item">
-            <img
-              class="compare-bikes__image"
-              src="src/images/compare-bikes/agile-ride.jpg"
-              alt="Agile ride 3"
-            />
+            <a href="#" class="compare-bikes__link">
+              <img
+                class="compare-bikes__image"
+                src="src/images/compare-bikes/agile-ride.jpg"
+                alt="Agile ride 3"
+              />
+            </a>
             <h3 class="compare-bikes__name">Agile ride 3</h3>
             <p class="compare-bikes__description">
               The lightweight frame that has earned the street cred as a
@@ -103,29 +109,35 @@
 
         <ul class="details__list">
           <li class="details__item">
-            <img
-              class="details__image"
-              src="src/images/details/auto-unlock.jpg"
-              alt="Auto Unlock"
-            />
+            <a href="#" class="details__link">
+              <img
+                class="details__image"
+                src="src/images/details/auto-unlock.jpg"
+                alt="Auto Unlock"
+              />
+            </a>
             <h3 class="details__name">Auto Unlock</h3>
           </li>
 
           <li class="details__item">
-            <img
-              class="details__image"
-              src="src/images/details/range-lights.jpg"
-              alt="Range & Integrated lights"
-            />
+            <a href="#" class="details__link">
+              <img
+                class="details__image"
+                src="src/images/details/range-lights.jpg"
+                alt="Range & Integrated lights"
+              />
+            </a>
             <h3 class="details__name">Range & Integrated lights</h3>
           </li>
 
           <li class="details__item">
-            <img
-              class="details__image"
-              src="src/images/details/brakes.jpg"
-              alt="Hydraulic disc brakes"
-            />
+            <a href="#" class="details__link">
+              <img
+                class="details__image"
+                src="src/images/details/brakes.jpg"
+                alt="Hydraulic disc brakes"
+              />
+            </a>
             <h3 class="details__name">Hydraulic disc brakes</h3>
           </li>
         </ul>
@@ -134,23 +146,26 @@
       <section class="contact-us" id="contact-us">
         <h2 class="contact-us__title">Contact us</h2>
 
-        <form class="contact-us__form">
+        <form class="contact-us__form" onsubmit="this.reset(); return false;">
           <input
             class="contact-us__input"
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="e.g. John Smith"
+            required
           />
           <input
             class="contact-us__input"
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="e.g. john@example.com"
+            required
           />
           <textarea
             class="contact-us__textarea"
             name="message"
-            placeholder="Message"
+            placeholder="Tell us what you need..."
+            required
           ></textarea>
           <button class="contact-us__button" type="submit">Send</button>
         </form>
