@@ -11,7 +11,20 @@
   }
 
   &__list {
-    @include responsive-grid($columns: 3, $gap: 24px);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__photos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   &__link {
@@ -21,11 +34,39 @@
   }
 
   &__image {
-    @include image-cover(200px);
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &--narrow {
+      aspect-ratio: 324 / 320;
+
+      @media (min-width: 768px) {
+        flex: 0 0 32%;
+      }
+    }
+
+    &--wide {
+      aspect-ratio: 672 / 320;
+
+      @media (min-width: 768px) {
+        flex: 1;
+      }
+    }
   }
 
   &__name {
-    margin-top: 12px;
-    font-size: 16px;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    color: $color-gray;
+    font-size: 14px;
+    max-width: 700px;
   }
 }

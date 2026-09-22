@@ -24,10 +24,10 @@
   }
 }
 
-// Image that fills its box while keeping aspect ratio, with hover zoom
-@mixin image-cover($height) {
+// Image that keeps the real Figma aspect ratio (e.g. 324x446), with hover zoom
+@mixin image-cover($w: 1, $h: 1) {
   width: 100%;
-  height: $height;
+  aspect-ratio: #{$w} / #{$h};
   object-fit: cover;
   transition: transform 0.3s;
 

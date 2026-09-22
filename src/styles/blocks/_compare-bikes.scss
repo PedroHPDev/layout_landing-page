@@ -22,7 +22,7 @@
   }
 
   &__image {
-    @include image-cover(220px);
+    @include image-cover(324, 446);
   }
 
   &__name {
